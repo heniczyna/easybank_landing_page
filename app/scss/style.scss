@@ -1,0 +1,10 @@
+// Main SCSS file
+// Based on tutorial https://www.youtube.com/watch?v=aoQ6S1a32j8 there is
+// @import "variables";
+// without additional underscore, however more convenient way for me is adding "_" to match the file names
+
+@import "_variables";
+@import "_mixins";
+@import "_animations";
+@import "_globals";
+@import "_header";

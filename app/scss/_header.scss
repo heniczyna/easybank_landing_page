@@ -1,0 +1,117 @@
+.header{
+
+    //Hamburger Open Styles
+    &.open{
+        .overlay{
+            display: block;
+        }
+
+
+
+        .header__menu{
+            > span:first-child{
+                transform: rotate(45deg);
+            }
+            > span:nth-child(2){
+                opacity: 0;
+            }
+            > span:last-child{
+                transform: rotate(-45deg);
+            }
+        }        
+    }
+
+    .overlay{
+        // display: none;
+        opacity: 0; //if display: none is opacity: 0 required?
+        position: fixed;
+        top: 3.75rem; //offsets 60/16px=3.75rem
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-image: linear-gradient($DarkBlue, transparent);
+    }
+
+    nav{
+        padding: 1.0625rem 1.5rem;
+        //17px space vertical (top/bottom), 24px space horizontal (left/right)
+        //around for navigation pane
+        //17/16px=1.0625rem
+        //24/16px=1.5rem
+    }
+
+
+    &__logo{
+        img{
+            width: 8.8125rem; //141/16px=8.8125, 141px required width of the logo
+            height: 1.375rem; //22/16px=1.375, 22px required height of the logo
+
+        }
+
+    }
+    
+    &__menu{ //Mobile menu
+        > span{
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $DarkBlue;
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px 1px;
+            
+            &:not(:last-child){
+                margin-bottom: 5px;
+
+            }
+        }
+    }
+
+    &__links{
+        a{
+            position: relative;
+            font-size: $font-sm;
+            color: $GrayishBlue;
+            transition: color 300ms ease-in-out;
+            
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                height: 5px; //height of underscore element of links Home, About, etc
+                left: 0; //offset from left
+                right: 0; //offset from right
+                bottom: -30px;
+                background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+                opacity: 0;
+                transition: opacity 300ms ease-in-out;
+            }
+
+            &:hover{
+                color: $DarkBlue;
+
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+
+    &__cta{
+        font-size: $font-sm;
+        color: $White;
+        transition: opacity 300ms ease-in-out;
+
+        &:hover{
+            opacity: 0.75;
+        }
+    }
+
+
+}
+
+

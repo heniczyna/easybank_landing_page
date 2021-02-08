@@ -1,0 +1,16 @@
+// Colors from style-guide.md
+// Primary
+$DarkBlue: hsl(233, 26%, 24%);
+$LimeGreen: hsl(136, 65%, 51%);
+$BrightCyan: hsl(192, 70%, 51%);
+
+// Neutral
+$GrayishBlue: hsl(233, 8%, 62%);
+$LightGrayishBlue: hsl(220, 16%, 96%);
+$VeryLightGray: hsl(0, 0%, 98%);
+$White: hsl(0, 0%, 100%);
+
+// Font sizes
+// rem (relative to font-size of the root element) is unit relative to main font-size (here seems it is 16px)
+$font-med: 1.125rem; //18px, 1.125*16=18px
+$font-sm: 0.875rem; //14px, 0.875*16=14px
