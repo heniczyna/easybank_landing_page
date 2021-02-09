@@ -6,9 +6,7 @@
             display: block;
         }
 
-
-
-        .header__menu{
+        .header__toggle{
             > span:first-child{
                 transform: rotate(45deg);
             }
@@ -33,11 +31,10 @@
     }
 
     nav{
-        padding: 1.0625rem 1.5rem;
-        //17px space vertical (top/bottom), 24px space horizontal (left/right)
-        //around for navigation pane
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+        //17px space vertical (top/bottom) around for navigation pane
         //17/16px=1.0625rem
-        //24/16px=1.5rem
     }
 
 
@@ -50,7 +47,7 @@
 
     }
     
-    &__menu{ //Mobile menu
+    &__toggle{ //Mobile menu toggle
         > span{
             display: block;
             width: 26px;
@@ -63,6 +60,25 @@
                 margin-bottom: 5px;
 
             }
+        }
+    }
+
+    &__menu{
+        position: absolute; //moves white block of menu "Home, About, etc" to the top
+        width: calc(100% - 3rem); //3rem because of 2*margin
+        left: 50%;
+        transform: translateX(-50%);
+        //transform: translateX(-50%); together with left: 50%; makes white block of menu centered
+        background: $White;
+        margin-top: 1.5rem; //24/16px=1.5rem
+        padding: 1.625rem; //26/16px=1.625
+        border-radius: 5px;
+
+        a{
+            display: block; //to set the links position one under another
+            padding: 0.625rem; //10/16px=0.625
+            color: $DarkBlue;
+            text-align: center;
         }
     }
 

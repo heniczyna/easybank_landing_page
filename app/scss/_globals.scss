@@ -21,6 +21,18 @@ a, a:visited, a:hover{
     text-decoration: none;
 }
 
+// Spacing
+.container{
+    //to create general padding for website
+    //refers to _headers.scss, search for nav tag
+    //here defined padding for left and right, there for top/bottom
+    //using padding shorthand there is a problem with overwriting the paddings
+    //24px space horizontal (left/right)
+    //24/16px=1.5rem
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
 // Flexbox
 .flex{
     display: flex;

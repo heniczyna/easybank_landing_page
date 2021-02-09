@@ -1,4 +1,4 @@
-1:21:00
+1:34:10
 
 # [How to Make a Landing Page using HTML, SCSS, and JavaScript - Full Course](https://www.youtube.com/watch?v=aoQ6S1a32j8)
 
@@ -53,6 +53,27 @@ Environment for front-end designers and developers. You can test here your HTML,
     * `display: block` element is displayed as a block element (like `<p>`, it starts on a new line, and takes up the whole width)
     * `display: none` element is completely removed
     * whenever you need the element to disappear completely and not take up any space, you should use `display: none;`, if you want the element to have a transition or fade-in effect when becoming visible, you should use `opacity: 0;` [info](https://magnusbenoni.com/difference-between-display-visibility-opacity/)
+* HTML syntax support:
+  * `.header__menu` gives `<div class="header__menu"></div>`
+  * `a:link*5` gives 5 times of `<a href="http://"></a>`
+* `background` property, shorthand property [info](https://www.w3schools.com/css/css_background_shorthand.asp)
+  * when specifying background properties, you can use shorthand and specify all background properties in one line. Therefore, instead of:
+  ```
+  body {
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  }
+  ```
+  you can use shorthand property `background`:
+  ```
+  body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+  }
+  ```
+  Keep correct order of values. In this project, there has been used for example `background: color` or `background-color: color`, both means the same, as first value refers to color.
+* `position` refers to hierarchy of the elements, which element is on the top another element
 
 # Recommended sources
 * [Stack Overflow](https://stackoverflow.com)
