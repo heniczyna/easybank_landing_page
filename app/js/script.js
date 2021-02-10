@@ -1,26 +1,27 @@
 // console.log("hello");
 const btnHamburger = document.querySelector('#btnHamburger'); //# selector by id 
+const body = document.querySelector('body'); //. selector by class
 const header = document.querySelector('.header'); //. selector by class
-const overlay = document.querySelector('.overlay')
+const overlay = document.querySelector('.overlay');
+const fadeElems = document.querySelectorAll('.has-fade'); //selects all elements with class has-fade, without All selects only first element
 
 btnHamburger.addEventListener("click", function(){
     console.log("click hamburger");
 
     if(header.classList.contains("open")){ //Close Hamburger Menu
+        body.classList.remove("noscroll");
         header.classList.remove("open");
-        overlay.classList.remove("fade-in");
-        overlay.classList.add("fade-out");
+        fadeElems.forEach(function(element){ //element because it is looping for each element which has "has-fade" class
+            element.classList.remove("fade-in");
+            element.classList.add("fade-out");
+        });
     }
     else{ //Open Hamburger Menu
+        body.classList.add("noscroll");
         header.classList.add("open");
-        overlay.classList.remove("fade-out");
-        overlay.classList.add("fade-in");
+        fadeElems.forEach(function(element){
+            element.classList.remove("fade-out");
+            element.classList.add("fade-in");
+        });
     }
-
-    // if(btnHamburger.classList.contains("open")){
-    //     btnHamburger.classList.remove("open");
-    // }
-    // else{
-    //     btnHamburger.classList.add("open");
-    // }
 });

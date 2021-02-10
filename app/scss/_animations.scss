@@ -1,4 +1,8 @@
-//two animations for overlay (overlay appears when hamburger menu is clicked)
+.has-fade{
+    visibility: hidden;
+}
+
+//two animations for overlay (grey gradient overlay appears when hamburger menu is clicked)
 //you can transition opacity from 0 to 1, but no display: none to display: block 
 @keyframes fade-in {
     from {
@@ -12,12 +16,13 @@
     }
     to{
         // display: block;
+        visibility: visible;
         opacity: 1;
     }
 }
 
 .fade-in{
-    animation: fade-in 300ms ease-in-out forwards;
+    animation: fade-in 200ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -40,5 +45,5 @@
 }
 
 .fade-out{
-    animation: fade-out 300ms ease-in-out forwards;
+    animation: fade-out 200ms ease-in-out forwards;
 }
