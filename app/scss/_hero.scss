@@ -2,7 +2,7 @@
     &__image{
         border: red 1px solid;
         position: relative;
-        background-image: url('/images/bg-intro-mobile.svg');
+        background-image: url('/../../images/bg-intro-mobile.svg');
         // background-image: url('./../../images/bg-intro-mobile.svg');
         background-size: cover; //covers entire div
         background-repeat: no-repeat;
@@ -16,7 +16,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-image: url('/images/image-mockups.png');
+            background-image: url('/../../images/image-mockups.png');
             // background-image: url('./../../images/image-mockups.png');
             background-size: 93%;
             background-repeat: no-repeat;
