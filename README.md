@@ -1,4 +1,4 @@
-1:43:55
+1:57:20
 
 # [How to Make a Landing Page using HTML, SCSS, and JavaScript - Full Course](https://www.youtube.com/watch?v=aoQ6S1a32j8)
 
@@ -74,6 +74,11 @@ Environment for front-end designers and developers. You can test here your HTML,
   ```
   Keep correct order of values. In this project, there has been used for example `background: color` or `background-color: color`, both means the same, as first value refers to color.
 * `position` refers to hierarchy of the elements, which element is on the top another element
+* `::before` / `::after` CSS pseudoelements allows you to insert content onto a page without it needing to be in the HTML [info](https://css-tricks.com/almanac/selectors/a/after-and-before/)
+  * example in [_hero.scss](https://github.com/heniczyna/easybank_landing_page/blob/master/app/scss/_hero.scss) where `&__image` has `position: relative;` and `&::before` has `position: absolute;`
+  * `absolute` moves item to the top
+  * related Stack Overflow [topic](https://stackoverflow.com/questions/19415641/how-to-position-before-after-pseudo-elements-on-top-of-each-other)
+  * `content: ""` is important to specify the content to insert
 
 # Recommended sources
 * [Stack Overflow](https://stackoverflow.com)
