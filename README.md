@@ -56,21 +56,21 @@ Environment for front-end designers and developers. You can test here your HTML,
 # `background` property
 * `background` property, shorthand property [info](https://www.w3schools.com/css/css_background_shorthand.asp)
 * when specifying background properties, you can use shorthand and specify all background properties in one line. Therefore, instead of:
-```
-body {
-  background-color: #ffffff;
-  background-image: url("img_tree.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-} 
-```
-you can use shorthand property `background`:
-```
-body {
-  background: #ffffff url("img_tree.png") no-repeat right top;
-}
-```
-Keep correct order of values. In this project, there has been used for example `background: color` or `background-color: color`, both means the same, as first value refers to color.
+  ```
+  body {
+    background-color: #ffffff;
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  ```
+  you can use shorthand property `background`:
+  ```
+  body {
+    background: #ffffff url("img_tree.png") no-repeat right top;
+  }
+  ```
+  Keep correct order of values. In this project, there has been used for example `background: color` or `background-color: color`, both means the same, as first value refers to color.  
 
 # `::before` / `::after`
 * `::before` / `::after` CSS pseudoelements allows you to insert content onto a page without it needing to be in the HTML [info](https://css-tricks.com/almanac/selectors/a/after-and-before/)
