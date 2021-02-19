@@ -35,50 +35,60 @@ Environment for front-end designers and developers. You can test here your HTML,
 # Size
 * **rem** (relative to font-size of the root element) is unit relative to main font-size (here seems it is 16px)
 
+# [CSS transitions](https://www.w3schools.com/css/css3_transitions.asp)
+* `transition: opacity 300ms ease-in-out;`<br>
+`ease-in-out` timing function, specifies a transition effect with slow start and end, further options:
+* `ease-in` specifies a transition effect with a slow start
+* `ease-out` specifies a transition effect with a slow end
+
+# [CSS animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#using_animation_shorthand)
+* `animation: fade-in 300ms ease-in-out forwards;`<br>
+`forwards` value of `fill-mode`<br>
+(the full syntax is `animation: name duration timing-function delay iteration-count direction fill-mode;`) makes sure element would hold the last keyframe state of animation after animation ends (here refers to `fade-in` and `fade-out`)
+
+# `display` property
+* property `display` (such as `display: block` or `display: none`) can not be animated [info](https://www.impressivewebs.com/animate-display-block-none/)
+* `display` property specifies if/how an element is displayed [info](https://www.w3schools.com/cssref/pr_class_display.asp)
+  * `display: block` element is displayed as a block element (like `<p>`, it starts on a new line, and takes up the whole width)
+  * `display: none` element is completely removed
+  * whenever you need the element to disappear completely and not take up any space, you should use `display: none;`, if you want the element to have a transition or fade-in effect when becoming visible, you should use `opacity: 0;` [info](https://magnusbenoni.com/difference-between-display-visibility-opacity/)
+
+# `background` property
+* `background` property, shorthand property [info](https://www.w3schools.com/css/css_background_shorthand.asp)
+* when specifying background properties, you can use shorthand and specify all background properties in one line. Therefore, instead of:
+```
+body {
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+} 
+```
+you can use shorthand property `background`:
+```
+body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+}
+```
+Keep correct order of values. In this project, there has been used for example `background: color` or `background-color: color`, both means the same, as first value refers to color.
+
+# `::before` / `::after`
+* `::before` / `::after` CSS pseudoelements allows you to insert content onto a page without it needing to be in the HTML [info](https://css-tricks.com/almanac/selectors/a/after-and-before/)
+* example in [_hero.scss](https://github.com/heniczyna/easybank_landing_page/blob/master/app/scss/_hero.scss) where `&__image` has `position: relative;` and `&::before` has `position: absolute;`
+* `position` refers to hierarchy of the elements, which element is on the top another element
+  * `absolute` moves item to the top
+* related Stack Overflow [topic](https://stackoverflow.com/questions/19415641/how-to-position-before-after-pseudo-elements-on-top-of-each-other)
+* `content: ""` is important to specify the content to insert
+
 # Code snippets
 * `<a href="/" class="header__logo">`<br>
 `"/"` loads default page again
 * `<a href="#" class="button">Request Invite</a>`<br>
 `"#"` stays on the same page
-* CSS transitions [info](https://www.w3schools.com/css/css3_transitions.asp)
-  * `transition: opacity 300ms ease-in-out;`<br>
-  `ease-in-out` timing function, specifies a transition effect with slow start and end, further options:
-    * `ease-in` specifies a transition effect with a slow start
-    * `ease-out` specifies a transition effect with a slow end
-* CSS animations [info](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations#using_animation_shorthand)
-  * `animation: fade-in 300ms ease-in-out forwards;`<br>
-`forwards` value of `fill-mode` (the full syntax is `animation: name duration timing-function delay iteration-count direction fill-mode;`) makes sure element would hold the last keyframe state of animation after animation ends (here refers to `fade-in` and `fade-out`)
-  * property `display` (such as `display: block` or `display: none`) can not be animated [info](https://www.impressivewebs.com/animate-display-block-none/)
-  * `display` property specifies if/how an element is displayed [info](https://www.w3schools.com/cssref/pr_class_display.asp)
-    * `display: block` element is displayed as a block element (like `<p>`, it starts on a new line, and takes up the whole width)
-    * `display: none` element is completely removed
-    * whenever you need the element to disappear completely and not take up any space, you should use `display: none;`, if you want the element to have a transition or fade-in effect when becoming visible, you should use `opacity: 0;` [info](https://magnusbenoni.com/difference-between-display-visibility-opacity/)
-* HTML syntax support:
-  * `.header__menu` gives `<div class="header__menu"></div>`
-  * `a:link*5` gives 5 times of `<a href="http://"></a>`
-* `background` property, shorthand property [info](https://www.w3schools.com/css/css_background_shorthand.asp)
-  * when specifying background properties, you can use shorthand and specify all background properties in one line. Therefore, instead of:
-  ```
-  body {
-  background-color: #ffffff;
-  background-image: url("img_tree.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  }
-  ```
-  you can use shorthand property `background`:
-  ```
-  body {
-  background: #ffffff url("img_tree.png") no-repeat right top;
-  }
-  ```
-  Keep correct order of values. In this project, there has been used for example `background: color` or `background-color: color`, both means the same, as first value refers to color.
-* `position` refers to hierarchy of the elements, which element is on the top another element
-* `::before` / `::after` CSS pseudoelements allows you to insert content onto a page without it needing to be in the HTML [info](https://css-tricks.com/almanac/selectors/a/after-and-before/)
-  * example in [_hero.scss](https://github.com/heniczyna/easybank_landing_page/blob/master/app/scss/_hero.scss) where `&__image` has `position: relative;` and `&::before` has `position: absolute;`
-  * `absolute` moves item to the top
-  * related Stack Overflow [topic](https://stackoverflow.com/questions/19415641/how-to-position-before-after-pseudo-elements-on-top-of-each-other)
-  * `content: ""` is important to specify the content to insert
+
+# HTML syntax support:
+* `.header__menu` gives `<div class="header__menu"></div>`
+* `a:link*5` gives 5 times of `<a href="http://"></a>`
 
 # Recommended sources
 * [Stack Overflow](https://stackoverflow.com)
