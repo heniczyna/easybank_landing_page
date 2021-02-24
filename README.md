@@ -1,4 +1,4 @@
-2:07:15
+2:19:46
 
 # [How to Make a Landing Page using HTML, SCSS, and JavaScript - Full Course](https://www.youtube.com/watch?v=aoQ6S1a32j8)
 
@@ -79,6 +79,10 @@ Environment for front-end designers and developers. You can test here your HTML,
   * `absolute` moves item to the top
 * related Stack Overflow [topic](https://stackoverflow.com/questions/19415641/how-to-position-before-after-pseudo-elements-on-top-of-each-other)
 * `content: ""` is important to specify the content to insert
+
+# `flex` property
+* sort of ratio how much space things occupy
+* example in [_hero.scss](https://github.com/heniczyna/easybank_landing_page/blob/master/app/scss/_hero.scss) where `hero__image` will occupy `3/5` of space, and `hero__text` will occupy `2/5` of space (because of `flex: 3;` and `flex: 2;`)
 
 # Code snippets
 * `<a href="/" class="header__logo">`<br>

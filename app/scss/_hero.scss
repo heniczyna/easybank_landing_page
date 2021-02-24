@@ -1,6 +1,11 @@
 .hero{
+    @include breakpoint-up(large){     
+        display: flex; //flexbox parent
+        align-items: center;
+    }
+
     &__image{
-        border: red 1px solid;
+        // border: red 1px solid; //temporary border
         position: relative;
         background-image: url('./../../images/bg-intro-mobile.svg');
         background-size: cover; //covers entire div
@@ -9,6 +14,17 @@
         min-height: 17.5rem;
         //280/16px=17.5rem, 280px height of bg-intro-mobile.svg 
         //16px base font
+
+        @include breakpoint-up(large){
+            //flex: 3; ratio how much space image will occupy,
+            //compare with flex: 2; in the hero__text
+            //image will occupy 3/5 and text 2/5 
+            flex: 3;
+            order: 2; //to place the image on the right in desktop view
+            height: 41rem; //655/16px=41rem
+            background-image: url('./../../images/bg-intro-desktop.svg');
+            background-position: left center;
+        }
 
         &::before{
             content: "";
@@ -23,6 +39,11 @@
     }
     &__text{
         text-align: center;
+
+        @include breakpoint-up(large){
+            flex: 2;
+            order: 1; //to place the next on the left
+        }
 
         h1{
             font-weight: 300;
