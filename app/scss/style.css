@@ -93,6 +93,12 @@ body {
   line-height: 1.3;
 }
 
+@media (min-width: 64em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
 body.noscroll {
   overflow: hidden;
 }
@@ -308,8 +314,12 @@ button:hover, .button:hover {
   opacity: 1;
 }
 
+.hero {
+  background-color: #fafafa;
+}
+
 @media (min-width: 64em) {
-  .hero {
+  .hero .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -365,6 +375,7 @@ button:hover, .button:hover {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    text-align: left;
   }
 }
 
@@ -374,6 +385,12 @@ button:hover, .button:hover {
   line-height: 1.15;
   color: #2d314d;
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 3.25rem;
+  }
 }
 
 .hero__text p {
