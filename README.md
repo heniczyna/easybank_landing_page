@@ -117,6 +117,13 @@ Environment for front-end designers and developers. You can test here your HTML,
 * sort of ratio how much space things occupy
 * example in [_hero.scss](https://github.com/heniczyna/easybank_landing_page/blob/master/app/scss/_hero.scss) where `hero__image` will occupy `3/5` of space, and `hero__text` will occupy `2/5` of space (because of `flex: 3;` and `flex: 2;`)
 
+# [Google Fonts](https://fonts.google.com/)
+Example of usage: go to the website, search for `poppins` for example, then choose required optins hitting `Select this style`. On the right hand side additional window pops up. Choose `@import` option and copy code within `<style></style>` and paste it to your css/scss file, example for `Light 300` and `Regular 400`:
+```scss
+/* Importing Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+``` 
+
 # Code snippets
 * `<a href="/" class="header__logo">`<br>
 `"/"` loads default page again
