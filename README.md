@@ -14,6 +14,39 @@ Demo of this use case is [here](https://css-tricks.com/almanac/selectors/c/child
 
 > * **Additional info** <https://www.w3schools.com/cssref/css_selectors.asp>
 
+Selector usage in SCSS files:
+```scss
+.toggle{
+    .active{
+    }
+}
+```
+Sass compiler compiles it to:
+```css
+.toggle .active {
+} 
+```
+it refers to element with class `active` inside element with class `toggle`. Something like below:
+```html
+<div class="toggle">
+    <div class="active"></div>
+</div>
+```
+
+If you use selector `&`:
+```scss
+.toggle{
+    &.active{
+    }
+}
+```
+Sass compiler compiles it to:
+```css
+.toggle.active {
+} 
+```
+it refers to element with class `toggle active`.
+
 # [`<button>` specification](https://dev.to/clairecodes/why-its-important-to-give-your-html-button-a-type-58k9)
 > * **Additional info** in first instance there was used:<br>
 `<button type="button">Request Invite</button>`<br>
