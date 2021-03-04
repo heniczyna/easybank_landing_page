@@ -133,6 +133,10 @@ Example of usage: go to the website, search for `poppins` for example, then choo
 # HTML syntax support:
 * `.header__menu` gives `<div class="header__menu"></div>`
 * `a:link*5` gives 5 times of `<a href="http://"></a>`
+* `&copy;` gives copyright icon, example of usage:
+  ```html
+  <p>Brand Page &copy; 2021</p>
+  ```
 
 # Recommended sources
 * [Stack Overflow](https://stackoverflow.com)
