@@ -112,6 +112,23 @@ Environment for front-end designers and developers. You can test here your HTML,
   * `absolute` moves item to the top
 * related Stack Overflow [topic](https://stackoverflow.com/questions/19415641/how-to-position-before-after-pseudo-elements-on-top-of-each-other)
 * `content: ""` is important to specify the content to insert
+* combination of `::after` and `:hover`, [info](https://stackoverflow.com/questions/13233991/combine-after-with-hover)
+  * important is order of `::after` and `:hover`, should be: `:hover::after` (not `:hover::after`), example SCSS of changing level of bluring when hovering:
+    ```scss
+    .showcase{
+      &::after{
+        //all required properties
+        background-image: url("../images/showcase.jpg");
+        filter: blur(10px);
+      }
+      &:hover{
+          &::after{
+              filter: blur(0px);
+          }
+      }
+    }
+    ```
+    It compiles to `.showcase::after` and `.showcase:hover::after`
 
 # `flex` property
 * sort of ratio how much space things occupy
