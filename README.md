@@ -47,6 +47,25 @@ Sass compiler compiles it to:
 ```
 it refers to element with class `toggle active`.
 
+Selectors by `id` and `class`:
+* `#` selector by `id`, example (HTML & SCSS):
+  ```html
+  <header id="showcase"></header>
+  ```
+  `showcase` will be styled with SCSS:
+  ```scss
+  #showcase{
+  }
+  ```
+* `.` selector by `class`
+  ```html
+  <header class="showcase"></header>
+  ```
+  ```scss
+  .showcase{
+  }
+  ```
+
 # [`<button>` specification](https://dev.to/clairecodes/why-its-important-to-give-your-html-button-a-type-58k9)
 > * **Additional info** in first instance there was used:<br>
 `<button type="button">Request Invite</button>`<br>
@@ -61,6 +80,9 @@ Other options for `type`:
 * no type = `type` attribute is missing (when the `type` attribute is missing the button behaves as `submit` button).
 
 `type` of button should be declared to avoid bugs, and unexpected behaviours.
+
+# `<p>` specification
+By default, paragraph has 10px of margin
 
 # [CodePen](https://codepen.io/)
 Environment for front-end designers and developers. You can test here your HTML, CSS, JS code. What is more, you can discover here example codes from other users, to check how things have been done. For example, you can search CodePen for *hamburger animation*, and one of the results is this [one](https://codepen.io/samikeijonen/pen/jqvxdL).  
