@@ -170,6 +170,21 @@ Example of usage: go to the website, search for `poppins` for example, then choo
 `"#"` stays on the same page
 
 # HTML syntax support:
+* VSC & Emmet Abbreviation (VSC built-in): create `index.html`, type `!` (exclamation mark) and hit `Tab`, you get initial HTML code, such as:
+  ```html
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+      
+  </body>
+  </html>
+  ```
 * `.header__menu` gives `<div class="header__menu"></div>`
 * `a:link*5` gives 5 times of `<a href="http://"></a>`
 * `&copy;` gives copyright icon, example of usage:
