@@ -156,6 +156,19 @@ Environment for front-end designers and developers. You can test here your HTML,
 * sort of ratio how much space things occupy
 * example in [_hero.scss](https://github.com/heniczyna/easybank_landing_page/blob/master/app/scss/_hero.scss) where `hero__image` will occupy `3/5` of space, and `hero__text` will occupy `2/5` of space (because of `flex: 3;` and `flex: 2;`)
 
+# Flexbox
+* `justify-content` [info](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) and `align-items` [info](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items), example:
+  ```scss
+  .slide-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  ```
+  * `justify-content` how the browser distributes space between and around content items along the **main-axis** of a flex container (main axis in this case is **Y** (from top to bottom) because flex-direction is set to column)
+  * `align-items` in flexbox, it controls the alignment of items on the **Cross Axis** (perpendicular to the main axis - in this case it is **X** (from left to right) because flex-direction is set to column)
+
 # [Google Fonts](https://fonts.google.com/)
 Example of usage: go to the website, search for `poppins` for example, then choose required optins hitting `Select this style`. On the right hand side additional window pops up. Choose `@import` option and copy code within `<style></style>` and paste it to your css/scss file, example for `Light 300` and `Regular 400`:
 ```scss
