@@ -163,6 +163,22 @@ Example of usage: go to the website, search for `poppins` for example, then choo
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 ``` 
 
+# JavaScript
+* `document.querySelectorAll` vs `document.querySelector`
+  * To select all elements with class `slide`, if there are more than one:
+    ```javascript
+    let sliderImages = document.querySelectorAll(".slide");
+    ```
+    * to check how many elements have been selected, use `sliderImages.length`
+    * to access selected elements, use: `sliderImages[index]`
+    * to display/hide selected elements, use:<br>
+      `sliderImages[index].style.display = "block";`<br>
+      `sliderImages[index].style.display = "none";`
+  * To select one element with id `arrow-left` (I believe it selects the first element which matches, I have not checked that):
+    ```javascript
+    let arrowLeft = document.querySelector("#arrow-left");
+    ```
+
 # Code snippets
 * `<a href="/" class="header__logo">`<br>
 `"/"` loads default page again
