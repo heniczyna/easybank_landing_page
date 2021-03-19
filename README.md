@@ -220,6 +220,15 @@ Example of usage: go to the website, search for `poppins` for example, then choo
   ```html
   <p>Brand Page &copy; 2021</p>
   ```
+* Linking to particular sections of the website through `id`, example of one list item and when hitted takes you to the part of the website identified by `id="about-me"`:
+  ```html
+  <ul>
+    <li><a href="#about-me">About me</a></li>
+  </ul>
+
+  <section id="about-me">
+  </section>
+  ```
 
 # Recommended sources
 * [Stack Overflow](https://stackoverflow.com)
