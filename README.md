@@ -47,6 +47,35 @@ Sass compiler compiles it to:
 ```
 it refers to element with class `toggle active`.
 
+Styling `<a></a>` element with given class will be done as follows (when you hover the link, color changes to coral, default state is color white with no decorations like underlining):
+```html
+<a class="hero-link" href="#about-me">About me</a>
+```
+And corresponding styling code:
+```scss
+a{
+    text-decoration: none;
+    color: white;
+
+    &.hero-link{
+        &:hover{
+            color: coral;
+        }
+    }
+}
+```
+Sass compiler compiles it to:
+```css
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a.hero-link:hover {
+  color: coral;
+}
+```
+
 Selectors by `id` and `class`:
 * `#` selector by `id`, example (HTML & SCSS):
   ```html
