@@ -205,6 +205,41 @@ Example of usage: go to the website, search for `poppins` for example, then choo
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 ``` 
 
+# [Font Awesome](https://fontawesome.com/start)
+* account required
+* it provides you the access to icons
+* firstly you need to add Font Awesome kit to your webpage:
+  * to see what kits you have available, open account navigation (top right section) and choose `Kits` (or just hit this [link](https://fontawesome.com/kits))
+  * choose one of available kits, and hit `Open`
+  * change tab to `How to use`
+  * place kit's code into the `<head></head>` tags
+  * there is also an example `Show me exactly where to put this kit code`
+  * my first kit (created by default just by creating an account and confirming email address) is:
+    ```html
+    <script src="https://kit.fontawesome.com/119d6139c0.js" crossorigin="anonymous"></script>
+    ```
+  * I have put it just under the link to CSS file:
+    ```html
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="app/css/style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/119d6139c0.js" crossorigin="anonymous"></script>
+    ```
+* now you are read to use Font Awesome, for example placing an icon of thumb-up:
+    ```html
+    <body>
+      <i class="fas fa-thumbs-up fa-5x"></i>
+    </body>
+    ```
+  * further details available in [Basic Use](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)
+    * example of usage:
+      ```html
+      <i class="fas fa-camera"></i>
+      <!-- "fas" for style such us solid, regular, light (not ever style available in free version) -->
+      <!-- "fas" for solid and it is free -->
+      <!-- "fa-camera" for "fa-icon_name" ("fa" for font awesome -->
+      ```
+
 # JavaScript
 * `document.querySelectorAll` vs `document.querySelector`
   * To select all elements with class `slide`, if there are more than one:
