@@ -255,6 +255,10 @@ Example of usage: go to the website, search for `poppins` for example, then choo
     ```javascript
     let arrowLeft = document.querySelector("#arrow-left");
     ```
+* different way of selecting elements using `document.getElementById`, usage example:
+  ```javascript
+  const hamburgerButton = document.getElementById("hamburger");
+  ```
 
 # Code snippets
 * `<a href="/" class="header__logo">`<br>
